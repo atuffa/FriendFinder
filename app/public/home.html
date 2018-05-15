@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Bootsrarp-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--font-awesome-->
+
+    <!-- Latest compiled and minified css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <title>Finder Finder</title>
+
+    <style>
+            #alignDiv {
+                margin-left: 50px;
+                margin-bottom:40px;
+            }
+            h1{
+                font-size: 4.5em;
+                padding-top:50px;
+            }
+            h3{
+                font-size:2.5em;
+                font-style:bold;
+            }
+            hr{
+                font-weight: 2px;
+            }
+            button{
+                margin-top: 20px;
+                /* margin-bottom:30px; */
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav  class="navbar navbar-default" >
+            <div id="alignDiv">
+                <h1><i class="fab fa-facebook"></i> Friend Finder</h1>
+                <hr>
+                <h3>Answer a few basic questions</h3>
+                <h3>Then find the friend with the greatest compatibility</h3>
+                <a href="/survey"><button id="survey" type="button" class="btn btn-primary btn-lg"><i class="fas fa-list-alt"></i> Go to Survey</button></a>
+            </div>
+        </nav>
+        <p><a href="/api/friends">API Friend List</a> | <a href="https://github.com/atuffa/FriendFinder.git">GitHub Repo</a></p>
+    </div> 
+</body>
+</html>
