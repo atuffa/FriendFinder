@@ -1,0 +1,6 @@
+{
+    "name": "friendfinder",
+    "description": "A dating app",
+    "repository":"git+https://github.com/atuffa/FriendFinder.git",
+   " keywords":["node", "express", "static"]
+}
