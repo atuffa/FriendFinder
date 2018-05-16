@@ -67,7 +67,7 @@ module.exports = function(app) {
             }//End of for loop
             return counts;
         }// End of indexOfMinValue
-
+        console.log(indexOfMinValue(rawDiff, minValue))
         // For loop used to push the elements that mactch to bestMatch array
         for (i in indexOfMinValue(rawDiff, minValue)){
             bestMatch.push(friendArray[i]);
@@ -76,6 +76,7 @@ module.exports = function(app) {
         // push the new player to friendArray once the best match is figured out
         friendArray.push(newFriend);
 
+        console.log(bestMatch)
         // return the best match friend
         res.json(bestMatch);
 
