@@ -18,6 +18,7 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
     app.get("/api/friends", function(req, res) {
+        console.log(friendArray)
         res.json(friendArray);
     });
 
@@ -25,7 +26,7 @@ module.exports = function(app) {
     app.post("/api/friends", function(req, res){
         // the new post value inputed
         let newFriend = req.body;
-        console.log(newFriend);
+        // console.log(newFriend);
 
         // used to store the best match from the databse 
         let bestMatch = [];
@@ -35,9 +36,9 @@ module.exports = function(app) {
         let totalDiff = 0;
         let diff = 0;
 
-        // for loop to calculate the diff of score between the user and the list of frieds in the database
+        // for loop to calculate the diff of score between the user and the list of friends in the database
         for (i in friendArray){
-            //   console.log(friendArray[0].scores[0])
+              console.log(friendArray[0].scores[0])
             for(j in friendArray[i].scores){
                 diff = Math.abs(parseInt(friendArray[i].scores[j]) - parseInt(newFriend.scores[j]))
                 totalDiff += diff
@@ -55,7 +56,7 @@ module.exports = function(app) {
 
         // get the min value of all the diff's
         let minValue = Math.min.apply(null, rawDiff)
-        console.log(minValue);
+        // console.log(minValue);
         
         // function to find index of if there are multiple element with the same minValue
         let indexOfMinValue = function(array,element){
@@ -67,7 +68,7 @@ module.exports = function(app) {
             }//End of for loop
             return counts;
         }// End of indexOfMinValue
-        console.log(indexOfMinValue(rawDiff, minValue))
+        // console.log(indexOfMinValue(rawDiff, minValue))
         // For loop used to push the elements that mactch to bestMatch array
         for (i in indexOfMinValue(rawDiff, minValue)){
             bestMatch.push(friendArray[i]);
@@ -76,7 +77,7 @@ module.exports = function(app) {
         // push the new player to friendArray once the best match is figured out
         friendArray.push(newFriend);
 
-        console.log(bestMatch)
+        // console.log(bestMatch)
         // return the best match friend
         res.json(bestMatch);
 
